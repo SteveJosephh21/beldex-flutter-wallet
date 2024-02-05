@@ -443,6 +443,7 @@ class SendFormState extends State<SendForm> with TickerProviderStateMixin {
                                       .caption
                                       .color),
                               controller: _cryptoAmountController,
+                              maxLength: 15,
                               keyboardType: TextInputType.numberWithOptions(
                                   signed: false, decimal: true),
                               inputFormatters: [
@@ -467,7 +468,8 @@ class SendFormState extends State<SendForm> with TickerProviderStateMixin {
                                       color: Colors.grey.withOpacity(0.6)),
                                   hintText: S.of(context).enterAmount,
                                   errorStyle:
-                                  TextStyle(color: BeldexPalette.red)),
+                                  TextStyle(color: BeldexPalette.red),
+                                  counterText: ''),
                               onTap: (){
                                 isFlashMap = false;
                               },
